@@ -12,42 +12,42 @@ lamp.yml
   hosts: localhost
   become: yes
   tasks:
-  # install httpd
+  
   - name: install httpd package
     ansible.builtin.dnf:
       name: httpd
       state: present
-  # install mariadb
+ 
   - name: install mariadb package
     ansible.builtin.dnf:
       name: mariadb105-server
       state: present
-  # install php
+  
   - name: install php package
     ansible.builtin.dnf:
       name:
        - php
        - php-fpm
       state: present
-  # start httpd
+  
   - name: start and enable httpd
     ansible.builtin.systemd_service:
       name: httpd
       state: started
       enabled: true
-  # start mariadb
+  
   - name: start and enable mariadb
     ansible.builtin.systemd_service:
       name: mariadb
       state: started
       enabled: true
-  # start php
+  
   - name: start and enable php
     ansible.builtin.systemd_service:
       name: php-fpm
       state: started
       enabled: true
-  # deploy php
+
   - name: deploy php
     ansible.builtin.copy:
      dest: /var/www/html/index.html
@@ -132,12 +132,11 @@ lamp.yml
 
 lemp.yml
 
-# variable -> dynamic value assignment
 ---
 - name: install LEMP stack using variable
   hosts: localhost
   become: yes
-  # define variable and assign values
+
   vars:
     web_pkg: nginx # hard codeing
     db_pkg: mariadb105-server
