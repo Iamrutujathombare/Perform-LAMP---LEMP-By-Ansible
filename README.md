@@ -201,19 +201,34 @@ ansible-playbook -i inventory lamp-playbook.yml
 ansible-playbook -i inventory lemp-playbook.yml
 
 ## Screenshots
-Add screenshots.
+Images of project
+
+
 
 ![a](IMG/1.png)
+
+
 
 
 ![b](IMG/2.png)
 
 
+
+
 ![c](IMG/3.png)
+
+
 
 
 ![d](IMG/4.png)
 
 
-## Author
-Rutuja Thombare
+
+
+## 👩‍💻 Author
+
+**Rutuja Thombare**  
+AWS & DevOps Engineer  
+📧 Email: rutujathombare7387@gmail.com
+🔗 GitHub: https://github.com/Iamrutujathombare
+
