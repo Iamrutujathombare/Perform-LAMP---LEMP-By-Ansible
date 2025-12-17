@@ -7,6 +7,8 @@ This project demonstrates automated deployment of both LAMP and LEMP stacks usin
 
 lamp.yml
 
+```bash
+
 ---
 - name: install lamp in amazon linux
   hosts: localhost
@@ -125,12 +127,13 @@ lamp.yml
 
        </body>
        </html>
-
+```
    
 
 - Deploy LEMP (Nginx, PHP-FPM, MySQL) with the use of variables
 
 lemp.yml
+```bash
 
 ---
 - name: install LEMP stack using variable
@@ -192,7 +195,7 @@ lemp.yml
 - PHP
 - MySQL / MariaDB
 - AWS EC2
-
+```
 ## How to Run
 ansible-playbook -i inventory lamp-playbook.yml
 ansible-playbook -i inventory lemp-playbook.yml
